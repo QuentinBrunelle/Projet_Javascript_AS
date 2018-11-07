@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Boutique de POP! en ligne </title>
+        <meta charset="utf-8"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    
+    <body onload="affichagePrix()">
+        <header>
+            <nav>
+                <ul>
+                    <li>Accueil</li>
+                    <li>Liste des articles</li>
+                    <li id="compteur">Mon Panier </li>
+                </ul>
+            </nav>
+        </header>
+        <section id = "zone_achats">
+            <h1 id="titre_liste">Liste des articles</h1>
+            <div class="red-divider"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_hp.jpeg" alt="Harry Potter" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,0,0)" type="button" class="btn_ajouter" data-nom="Harry Potter" data-prix ="14.90€" data-description="POP! Harry Potter">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,0,1)" type="button" class="btn_retirer" data-nom="Harry Potter" data-prix ="14.90€" data-description="POP! Harry Potter">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_loki.jpg" alt="Loki" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,1,0)" type="button" class="btn_ajouter" data-nom="Loki" data-prix ="17.99€" data-description="POP! Loki ">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,1,1)" type="button" class="btn_retirer" data-nom="Loki" data-prix ="17.99€" data-description="POP! Loki ">Retirer au panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_spider.jpg" alt="SpiderMan" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,2,0)" type="button" class="btn_ajouter" data-nom="SpiderMan" data-prix ="24.99€" data-description="POP! SpiderMan">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,2,1)" type="button" class="btn_retirer" data-nom="SpiderMan" data-prix ="24.99€" data-description="POP! SpiderMan">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_iron_man.jpg" alt="IronMan" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,3,0)" type="button" class="btn_ajouter" data-nom="IronMan" data-prix ="14.99€" data-description="POP! IronMan">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,3,1)" type="button" class="btn_retirer" data-nom="IronMan" data-prix ="14.99€" data-description="POP! IronMan">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_freezer.jpg" alt="Freezer" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,4,0)" type="button" class="btn_ajouter" data-nom="Freezer" data-prix ="149.99€" data-description="POP! Golden Freezer (Black Eyes)">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,4,1)" type="button" class="btn_retirer" data-nom="Freezer" data-prix ="149.99€" data-description="POP! Golden Freezer (Black Eyes)">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_bmax.jpg" alt="Baymax" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,5,0)" type="button" class="btn_ajouter" data-nom="Baymax" data-prix ="24.99€" data-description="POP! Baymax (Armored - Super Sized)">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,5,1)" type="button" class="btn_retirer" data-nom="Baymax" data-prix ="24.99€" data-description="POP! Baymax (Armored - Super Sized)">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+            
+                <div class="row">
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_edward.jpg" alt="Edward Kenway" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,6,0)" type="button" class="btn_ajouter" data-nom="Edward Kenway" data-prix ="14.99€" data-description="POP! Edward Kenway">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,6,1)" type="button" class="btn_retirer" data-nom="Edward Kenway" data-prix ="14.99€" data-description="POP! Edward Kenway">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_kratos.jpg" alt="Kratos" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,7,0)" type="button" class="btn_ajouter" data-nom="Kratos" data-prix ="34.99€" data-description="POP! Kratos (Poseidon's Rage)">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,7,1)" type="button" class="btn_retirer" data-nom="Kratos" data-prix ="34.99€" data-description="POP! Kratos (Poseidon's Rage)">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 produits">
+                        <img src="images/pop_venompool.jpg" alt="VenomPool" class="img_products">
+                        <div class="prix_boutons">
+                            <div class="button_class">
+                                <button onclick="affichageButton(this,8,0)" type="button" class="btn_ajouter" data-nom="VenomPool" data-prix ="18.99€" data-description="POP! VenomPool">Ajouter au panier</button>
+                                <button onclick="affichageButton(this,8,1)" type="button" class="btn_retirer" data-nom="VenomPool" data-prix ="18.99€" data-description="POP! VenomPool">Retirer du panier</button>
+                                <p class="prix_article"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="zone_commande">
+            <h1 id="titre_commande">Ma commande</h1>
+            <div class="red-divider"></div>
+            <div>
+                <div class="table-responsive-md">
+                    <table class="table table-hover" id="tableau_commande">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th id="description">Description</th>
+                                <th id="qte_tableau">Quantité</th>
+                                <th id="prix_tableau">Prix</th>
+                                <th id="prix_total_tableau">Prix total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <p id="total_ht">TOTAL HT : 0€</p>
+                <p id="tva_total">TVA A 20% : 0€</p>
+                <p id="somme_total">TOTAL : 0€</p>
+            </div>
+        </section>
+        
+        <p id="test"></p>
+        
+        <section id="logo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <i class="fas fa-credit-card fa-5x icon"></i>
+                        <p>Paiement sécurisé</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-truck fa-5x icon"></i>
+                        <p>Livraison rapide 48h</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-thumbs-up fa-5x icon"></i>
+                        <p>Satisfait ou remboursé</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <ul>
+                <li>Contact</li>
+                <li>Conditions générales de ventes</li>
+                <li>Livraison</li>
+                <li>Paiement sécurisé</li>
+                <li>Mentions légales</li>
+            </ul>
+            <p>© 2018 POP'N-STORE.FR</p>
+        </footer>
+        
+        <script type="text/javascript" src="pop_mystere.js">
+			var nb_rand = Math.random() * pop.length;
+			console.log(pop.length);
+			console.log(nb_rand);
+			console.log(pop[nb_rand]);
+			console.log(pop[nb_rand].nom);
+        </script>
+        
+        <script type="text/javascript">
+            var tableau_boutons_ajouter = document.getElementsByClassName("btn_ajouter");
+            
+            /* FONCTION PRINCIPALE 
+            *  Permet de changer le type de bouton (Ajouter ou Retirer) et de modifier le tableau de "Ma commande"
+            */
+            
+            function affichageButton(bouton, emplacement_bouton,type_bouton){
+                var tableau_boutons_ajouter = document.getElementsByClassName("btn_ajouter");
+                var tableau_boutons_retirer = document.getElementsByClassName("btn_retirer");
+                var reverse_bouton;
+                var test;
+
+                if(type_bouton%2==0){
+                    reverse_bouton = tableau_boutons_retirer[emplacement_bouton]; 
+                    ajouterLigneTableau(bouton);
+                }else{
+                    reverse_bouton = tableau_boutons_ajouter[emplacement_bouton];
+                    retirerLigneTableau(bouton);
+                }    
+                
+                if(bouton.style.display == "none"){
+                    bouton.style.display = "block";
+                    reverse_bouton.style.display = "none";
+                }else{
+                    bouton.style.display = "none";
+                    test = reverse_bouton.style.display = "block";
+                }
+                
+                affichageTotal();
+                
+            }
+            
+            /* Permet d'afficher l'ensemble des prix des articles au chargement de la page */
+            
+            function affichagePrix(){
+                var tableau_tarifs = document.getElementsByClassName("prix_article");
+                
+                for(let i = 0; i <9; i++){
+                    tableau_tarifs[i].innerHTML = $(tableau_boutons_ajouter[i]).data("prix");
+                }
+            }
+            
+            /* VARIABLES GLOBALES */
+            
+            var tableau = document.getElementById("tableau_commande"); 
+            var nombre_lignes = 0;
+            var somme =0;
+            var tva = 0;
+            var total_a_payer = 0;
+            var compteur = 0;
+            var i = 1;
+            
+            function ajouterLigneTableau(donnees){
+                
+                var nouvelle_ligne = tableau.insertRow(-1);
+                 
+                var colonne_une = nouvelle_ligne.insertCell(0);
+                colonne_une.innerHTML = $(donnees).data("description");
+				
+                var colonne_deux = nouvelle_ligne.insertCell(1);
+				
+                var saisie_quantite = document.createElement("input");
+                saisie_quantite.setAttribute("type","text");
+                saisie_quantite.setAttribute("name","saisie_quantite");
+                saisie_quantite.setAttribute("class","saisie_quantite");
+                saisie_quantite.setAttribute("size","10px");
+                saisie_quantite.setAttribute("onchange","affichageTotal()")
+                saisie_quantite.value = "1";
+                colonne_deux.appendChild(saisie_quantite);
+                
+ 
+                var colonne_trois = nouvelle_ligne.insertCell(2);
+                colonne_trois.innerHTML = $(donnees).data("prix");
+                
+                var colonne_quatre = nouvelle_ligne.insertCell(3);
+                colonne_quatre.innerHTML = $(donnees).data("prix");
+                
+                nombre_lignes++;
+            }
+            
+            function retirerLigneTableau(bouton){
+                var longueur = tableau.length;
+                i=1;
+                
+                while(i<9){					
+					if((tableau.rows[i].cells[0].innerHTML) == ($(bouton).data("description"))){
+						tableau.deleteRow(i);
+                        nombre_lignes--;
+						return true;
+					}
+					i++;
+				}
+            }
+                
+            function affichageTotal(){
+                i = 1;
+                somme = 0;
+                tva = 0;
+                total_a_payer = 0;
+                
+                if(nombre_lignes==0){
+                    document.getElementById("somme_total").innerHTML = "TOTAL &Agrave; PAYER : " + somme +"€"; 
+                }
+                
+                var element = document.getElementsByClassName("saisie_quantite");
+                
+                while(i<=nombre_lignes){    
+					
+					if(element[i-1].value >= 11 || element[i-1].value <=0){
+                        /*if(element[i-1].value == 0){
+                            tableau.deleteRow(i);
+                        }*/
+						tableau.rows[i].cells[3].innerHTML = "Quantité entre 1 et 10";
+					}else{
+                        var tarif_produit = parseFloat(tableau.rows[i].cells[2].innerHTML);
+                        tableau.rows[i].cells[3].innerHTML =  (element[i-1].value * tarif_produit).toFixed(2)+"€";
+                        somme +=  element[i-1].value * tarif_produit;
+                        //document.getElementById("test").innerHTML += "++++"+element[i-1].value;
+                        //document.getElementById("test").innerHTML += "++++"+(element[i-1].value*tarif_produit).toFixed(2);
+                    }
+                    i++;
+                }
+                
+                tva=somme*0.2;
+                total_a_payer = somme + tva;
+                document.getElementById("total_ht").innerHTML = "TOTAL HT : " + somme.toFixed(2);
+                document.getElementById("tva_total").innerHTML = "TVA A 20% : " + tva.toFixed(2) + "€";
+                document.getElementById("somme_total").innerHTML = "TOTAL &Agrave PAYER : " + total_a_payer.toFixed(2) + "€";
+                
+                compteurArticles(element);
+            }       
+            
+        
+            function compteurArticles(element){
+                var compteur = 0;
+                i=1;
+                while(i<=nombre_lignes){
+                    if(element[i-1].value >= 11 || element[i-1].value <=0){}
+                    else{
+				    compteur += parseInt(element[i-1].value);
+                    }
+                    
+                    i++;
+                }
+                
+                if(compteur==1 || compteur ==0){
+                    document.getElementById("compteur").innerHTML = "Mon panier : "+ compteur + " article";
+                }else{
+                    document.getElementById("compteur").innerHTML = "Mon panier : "+ compteur + " articles";
+                }
+                
+            }
+            
+        </script>
+        <!-- https://github.com/floriggi/DUT-AS-JavaScript -->
+    </body>
+</html>

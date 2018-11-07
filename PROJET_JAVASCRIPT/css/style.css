@@ -1,0 +1,200 @@
+*
+{
+  font-family: Arial, sans-serif;
+}
+
+.red-divider
+{
+    width:200px;
+    height: 2px;
+    background: #a52f2f;
+    margin: 0 auto 20px auto;
+}
+
+/* HEADER */
+
+header
+{
+    padding: 20px;
+    background-color: #a52f2f;
+    color: #fff;
+    font-size: 18px;
+}
+
+ul
+{
+    list-style: none;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+/* ACHATS */
+
+.container{
+    padding: 0;
+}
+
+.row{
+	margin-top:20px;
+}
+
+#titre_liste, #titre_commande
+{
+    text-align: center;
+}
+
+#zone_achats
+{
+    text-align: center;
+}
+
+.produits{
+    margin: 10px 0;
+}
+
+.img_products
+{
+    width: 300px;
+    height: 300px;
+}
+
+.button_class
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.prix_boutons
+{
+    display: flex;
+    justify-content:center;
+}
+
+.btn_ajouter {
+    -webkit-border-radius: 25;
+    -moz-border-radius: 25;
+    border-radius: 25px;
+    -webkit-box-shadow: 3px 3px 8px #666666;
+    -moz-box-shadow: 3px 3px 8px #666666;
+    box-shadow: 3px 3px 8px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #a52f2f;
+    padding: 10px 20px 10px 20px;
+    border: solid #F6360B 0px;
+    text-decoration: none;
+    display: block;
+}
+
+.btn_retirer {
+    -webkit-border-radius: 25;
+    -moz-border-radius: 25;
+    border-radius: 25px;
+    -webkit-box-shadow: 3px 3px 8px #666666;
+    -moz-box-shadow: 3px 3px 8px #666666;
+    box-shadow: 3px 3px 8px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #F6AC0B;
+    padding: 10px 20px 10px 20px;
+    border: solid #F6360B 0px;
+    text-decoration: none;
+    display: none;
+    
+}
+
+.btn_ajouter:hover, .btn_retirer:hover {
+    background: #F6360B;
+    text-decoration: none;
+}
+
+.prix_article{
+    width: 75px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 20px;
+    /*border: 1px solid black;*/
+}
+
+
+/* COMMANDE */
+
+#zone_commande{
+    margin: 50px 100px 40px 100px;
+}
+
+#tableau_commande{
+    margin: 30px 0px;
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+input[type=text]{
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+#description{
+	width:150px;
+}
+
+#qte_tableau{
+	width:150px;
+}
+
+#prix_tableau{
+	width:150px;
+}
+
+#prix_total_tableau{
+	width:175px;
+}
+
+#total_ht, #tva_total, #somme_total{
+    text-align: center;
+    font-weight: bold;
+}
+
+/* LOGO */
+
+#logo{
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #a52f2f;
+    color: #fff;
+}
+
+#logo p{
+    margin: 10px 0px;
+}
+
+
+/* FOOTER */
+
+
+footer{
+    background-color: #a52f2f;
+    height: 100%;
+    border-top: 2px solid #000;
+    padding-top:15px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
